@@ -1,13 +1,17 @@
-# ldapserver:tmp
+# ldapserver:sshd
 
 ## @edt ASIX M06-ASO 2018-2019
 
+## Maquina
+
+raulbaena/ldapserver:sshd --> Maquina servidor ldap amb base de dades dc=edt,dc=org
+
 ldapserver 2018-2019 edt.org cn
 
-Comandes:
+Comandes per execució
 
- * **server** docker run --rm --network netldap -h ldapserver --name ldapserver -p 389:389 -d ldapserver:tmp
- * **client** docker run --network netldap ---name ldaphost -rm -it fedora:27 /bin/bash
+ * **server** docker run --rm --network sshnet -h ldap --name ldap -p 389:389 -d ldapserver:sshd
+
 
 
 

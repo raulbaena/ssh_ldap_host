@@ -1,6 +1,6 @@
 # Version: 0.0.1
 # edt M06 2018-2019
-# Servidor ssh
+# Client ssh
 #-------------------------------------------------
 FROM edtasixm06/exam:latest
 LABEL author="@edt ASIX M06 2018-2019"

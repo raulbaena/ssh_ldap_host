@@ -3,4 +3,4 @@
 
 raulbaena/hostpam:sshd --> Host per conectarnos al servidor ssh i amb connexió al servidor ldap
 
-docker run --rm --name host --
+docker run --privileged --rm -h host --name host --network sshnet -it hostpam:sshd

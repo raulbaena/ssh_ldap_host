@@ -4,13 +4,21 @@
 
 # Arquitectura utilitzada
 
-raulbaena/sshd:final --> Servidor SSH amb connexió al servidor LDAP, aquest servidor es podran conectar usuaris locals y LDAP
+raulbaena/sshd:server --> Servidor SSH amb connexió al servidor LDAP, aquest servidor es podran conectar usuaris locals y LDAP
 
 raulbaena/ldapserver:sshd --> Servidor LDAP amb base de dades dc=edt,dc=org.
 
 raulbaena/hostpam:sshd --> Hostpam amb consexió amb el servidor LDAP
 
 Xarxa virtual creada sshnet
+
+### Descarregar imatges
+
+docker pull raulbaena/sshd:server
+
+docker pull raulbaena/ldapserver:sshd
+
+docker pull raulbaena/hostpam:sshd
 
 ### Comandes necesaries per l'execució de cada maquina
 

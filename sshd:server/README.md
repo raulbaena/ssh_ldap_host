@@ -4,15 +4,15 @@
 
 ## Maquines utilitzades
 
-raulbaena/sshd:final --> Servidor SSH amb connexió al servidor LDAP, aquest servidor es podran conectar usuaris locals y LDAP
+raulbaena/sshd2:server --> Servidor SSH amb connexió al servidor LDAP, aquest servidor es podran conectar usuaris locals y LDAP
 
-raulbaena/ldapserver:sshd --> Servidor LDAP amb base de dades dc=edt,dc=org.
+raulbaena/sshd2:ldap --> Servidor LDAP amb base de dades dc=edt,dc=org.
 
-raulbaena/hostpam:sshd --> Hostpam amb consexió amb el servidor LDAP
+raulbaena/sshd2:host --> Hostpam amb consexió amb el servidor LDAP
 
 ## Execucio de la maquina
 
-docker run --privileged --rm --name sshd -h sshd -p 1022:1022 --network sshnet -it sshd:server
+docker run --privileged --rm --name sshd -h sshd -p 1022:1022 --network sshnet -it raulbaena/sshd2:server
 
 ## Configuració del Servidor SSH
 

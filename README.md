@@ -23,11 +23,12 @@ docker pull raulbaena/sshd2:host
 
 docker network create sshnet
 
-docker run --privileged --rm -h host --name host --network sshnet -it raulbaena/sshd2:host
+docker run --rm --network sshnet -h ldap --name ldap -p 389:389 -d raulbaena/sshd2:ldap
 
 docker run --privileged --rm --name sshd -h sshd -p 1022:1022 --network sshnet -it raulbaena/sshd2:server
 
-docker run --rm --network sshnet -h ldap --name ldap -p 389:389 -d raulbaena/sshd2:ldap
+docker run --privileged --rm -h host --name host --network sshnet -it raulbaena/sshd2:host
+
 
 ### Directiva de restricció d’accés tipus AllowUsers.
 
